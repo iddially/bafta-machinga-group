@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bafta Machinga Group - Home</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 1em;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+
+        #slideshow {
+            width: 100%;
+            height: 300px;
+            overflow: hidden;
+            margin: 20px 0;
+        }
+
+        .slides img {
+            width: 20%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        #ads {
+            background-color: #f4f4f4;
+            padding: 1em;
+            text-align: center;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1em;
+            position: relative;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Bafta Machinga Group</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="products.html">Products</a>
+            <a href="contact_order.html">Contact & Order</a>
+        </nav>
+    </header>
+
+    <section id="slideshow">
+        <div class="slides">
+            <img src="handbag3.jpg" alt="Handbag">
+            <img src="Mens shoes3.WEBP" alt="Shoes">
+            <img src="men's shirts2.jpg" alt="Clothes">
+        </div>
+    </section>
+	
+	<script>
+    let slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+        let slides = document.getElementsByClassName("slides")[0].getElementsByTagName("img");
+        for (let i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none"; // Hide all slides
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) { slideIndex = 1; } // Loop back to the first slide
+        slides[slideIndex - 1].style.display = "block"; // Show the current slide
+        setTimeout(showSlides, 3000); // Change slide every 3 seconds
+    }
+</script>
+
+    <section id="ads">
+        <h2>Special Offers</h2>
+        <div class="ad">
+            <p>Discount on handbags this week!</p>
+        </div>
+        <div class="ad">
+            <p>Get 20% off on shoes for men and women!</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Bafta Machinga Group</p>
+    </footer>
+	
+</body>
+</html>
